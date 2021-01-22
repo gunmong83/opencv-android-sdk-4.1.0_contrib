@@ -20,16 +20,16 @@ public class Xphoto {
             INPAINT_SHIFTMAP = 0;
 
 
+    // C++: enum TransformTypes
+    public static final int
+            HAAR = 0;
+
+
     // C++: enum Bm3dSteps
     public static final int
             BM3D_STEPALL = 0,
             BM3D_STEP1 = 1,
             BM3D_STEP2 = 2;
-
-
-    // C++: enum TransformTypes
-    public static final int
-            HAAR = 0;
 
 
     //

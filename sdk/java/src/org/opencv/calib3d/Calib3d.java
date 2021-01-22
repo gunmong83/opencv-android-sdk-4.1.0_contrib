@@ -20,6 +20,12 @@ import org.opencv.utils.Converters;
 
 public class Calib3d {
 
+    // C++: enum GridType
+    public static final int
+            CirclesGridFinderParameters_SYMMETRIC_GRID = 0,
+            CirclesGridFinderParameters_ASYMMETRIC_GRID = 1;
+
+
     // C++: enum HandEyeCalibrationMethod
     public static final int
             CALIB_HAND_EYE_TSAI = 0,
@@ -27,12 +33,6 @@ public class Calib3d {
             CALIB_HAND_EYE_HORAUD = 2,
             CALIB_HAND_EYE_ANDREFF = 3,
             CALIB_HAND_EYE_DANIILIDIS = 4;
-
-
-    // C++: enum GridType
-    public static final int
-            CirclesGridFinderParameters_SYMMETRIC_GRID = 0,
-            CirclesGridFinderParameters_ASYMMETRIC_GRID = 1;
 
 
     // C++: enum <unnamed>

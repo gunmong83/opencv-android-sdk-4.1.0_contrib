@@ -16,12 +16,6 @@ import org.opencv.utils.Converters;
 
 public class Imgcodecs {
 
-    // C++: enum ImwriteEXRTypeFlags
-    public static final int
-            IMWRITE_EXR_TYPE_HALF = 1,
-            IMWRITE_EXR_TYPE_FLOAT = 2;
-
-
     // C++: enum ImwriteFlags
     public static final int
             IMWRITE_JPEG_QUALITY = 1,
@@ -44,14 +38,13 @@ public class Imgcodecs {
             IMWRITE_JPEG2000_COMPRESSION_X1000 = 272;
 
 
-    // C++: enum ImwritePAMFlags
+    // C++: enum ImwritePNGFlags
     public static final int
-            IMWRITE_PAM_FORMAT_NULL = 0,
-            IMWRITE_PAM_FORMAT_BLACKANDWHITE = 1,
-            IMWRITE_PAM_FORMAT_GRAYSCALE = 2,
-            IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA = 3,
-            IMWRITE_PAM_FORMAT_RGB = 4,
-            IMWRITE_PAM_FORMAT_RGB_ALPHA = 5;
+            IMWRITE_PNG_STRATEGY_DEFAULT = 0,
+            IMWRITE_PNG_STRATEGY_FILTERED = 1,
+            IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY = 2,
+            IMWRITE_PNG_STRATEGY_RLE = 3,
+            IMWRITE_PNG_STRATEGY_FIXED = 4;
 
 
     // C++: enum ImreadModes
@@ -71,13 +64,20 @@ public class Imgcodecs {
             IMREAD_IGNORE_ORIENTATION = 128;
 
 
-    // C++: enum ImwritePNGFlags
+    // C++: enum ImwritePAMFlags
     public static final int
-            IMWRITE_PNG_STRATEGY_DEFAULT = 0,
-            IMWRITE_PNG_STRATEGY_FILTERED = 1,
-            IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY = 2,
-            IMWRITE_PNG_STRATEGY_RLE = 3,
-            IMWRITE_PNG_STRATEGY_FIXED = 4;
+            IMWRITE_PAM_FORMAT_NULL = 0,
+            IMWRITE_PAM_FORMAT_BLACKANDWHITE = 1,
+            IMWRITE_PAM_FORMAT_GRAYSCALE = 2,
+            IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA = 3,
+            IMWRITE_PAM_FORMAT_RGB = 4,
+            IMWRITE_PAM_FORMAT_RGB_ALPHA = 5;
+
+
+    // C++: enum ImwriteEXRTypeFlags
+    public static final int
+            IMWRITE_EXR_TYPE_HALF = 1,
+            IMWRITE_EXR_TYPE_FLOAT = 2;
 
 
     //

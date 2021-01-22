@@ -405,6 +405,16 @@ set_target_properties(opencv_shape PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS opencv_shape )
 list(APPEND _IMPORT_CHECK_FILES_FOR_opencv_shape "${_IMPORT_PREFIX}/sdk/native/staticlibs/arm64-v8a/libopencv_shape.a" )
 
+# Import target "opencv_stitching" for configuration "Release"
+set_property(TARGET opencv_stitching APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(opencv_stitching PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/sdk/native/staticlibs/arm64-v8a/libopencv_stitching.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS opencv_stitching )
+list(APPEND _IMPORT_CHECK_FILES_FOR_opencv_stitching "${_IMPORT_PREFIX}/sdk/native/staticlibs/arm64-v8a/libopencv_stitching.a" )
+
 # Import target "opencv_structured_light" for configuration "Release"
 set_property(TARGET opencv_structured_light APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(opencv_structured_light PROPERTIES
@@ -434,16 +444,6 @@ set_target_properties(opencv_videostab PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS opencv_videostab )
 list(APPEND _IMPORT_CHECK_FILES_FOR_opencv_videostab "${_IMPORT_PREFIX}/sdk/native/staticlibs/arm64-v8a/libopencv_videostab.a" )
-
-# Import target "opencv_xfeatures2d" for configuration "Release"
-set_property(TARGET opencv_xfeatures2d APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(opencv_xfeatures2d PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/sdk/native/staticlibs/arm64-v8a/libopencv_xfeatures2d.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS opencv_xfeatures2d )
-list(APPEND _IMPORT_CHECK_FILES_FOR_opencv_xfeatures2d "${_IMPORT_PREFIX}/sdk/native/staticlibs/arm64-v8a/libopencv_xfeatures2d.a" )
 
 # Import target "opencv_ximgproc" for configuration "Release"
 set_property(TARGET opencv_ximgproc APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -514,16 +514,6 @@ set_target_properties(opencv_optflow PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS opencv_optflow )
 list(APPEND _IMPORT_CHECK_FILES_FOR_opencv_optflow "${_IMPORT_PREFIX}/sdk/native/staticlibs/arm64-v8a/libopencv_optflow.a" )
-
-# Import target "opencv_stitching" for configuration "Release"
-set_property(TARGET opencv_stitching APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(opencv_stitching PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/sdk/native/staticlibs/arm64-v8a/libopencv_stitching.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS opencv_stitching )
-list(APPEND _IMPORT_CHECK_FILES_FOR_opencv_stitching "${_IMPORT_PREFIX}/sdk/native/staticlibs/arm64-v8a/libopencv_stitching.a" )
 
 # Import target "opencv_superres" for configuration "Release"
 set_property(TARGET opencv_superres APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)

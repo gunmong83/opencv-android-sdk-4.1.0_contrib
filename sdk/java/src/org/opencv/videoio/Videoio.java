@@ -59,6 +59,50 @@ public class Videoio {
             CAP_PROP_WB_TEMPERATURE = 45;
 
 
+    // C++: enum VideoCaptureAPIs
+    public static final int
+            CAP_ANY = 0,
+            CAP_VFW = 200,
+            CAP_V4L = 200,
+            CAP_V4L2 = CAP_V4L,
+            CAP_FIREWIRE = 300,
+            CAP_FIREWARE = CAP_FIREWIRE,
+            CAP_IEEE1394 = CAP_FIREWIRE,
+            CAP_DC1394 = CAP_FIREWIRE,
+            CAP_CMU1394 = CAP_FIREWIRE,
+            CAP_QT = 500,
+            CAP_UNICAP = 600,
+            CAP_DSHOW = 700,
+            CAP_PVAPI = 800,
+            CAP_OPENNI = 900,
+            CAP_OPENNI_ASUS = 910,
+            CAP_ANDROID = 1000,
+            CAP_XIAPI = 1100,
+            CAP_AVFOUNDATION = 1200,
+            CAP_GIGANETIX = 1300,
+            CAP_MSMF = 1400,
+            CAP_WINRT = 1410,
+            CAP_INTELPERC = 1500,
+            CAP_REALSENSE = 1500,
+            CAP_OPENNI2 = 1600,
+            CAP_OPENNI2_ASUS = 1610,
+            CAP_GPHOTO2 = 1700,
+            CAP_GSTREAMER = 1800,
+            CAP_FFMPEG = 1900,
+            CAP_IMAGES = 2000,
+            CAP_ARAVIS = 2100,
+            CAP_OPENCV_MJPEG = 2200,
+            CAP_INTEL_MFX = 2300,
+            CAP_XINE = 2400;
+
+
+    // C++: enum VideoWriterProperties
+    public static final int
+            VIDEOWRITER_PROP_QUALITY = 1,
+            VIDEOWRITER_PROP_FRAMEBYTES = 2,
+            VIDEOWRITER_PROP_NSTRIPES = 3;
+
+
     // C++: enum <unnamed>
     public static final int
             CAP_PROP_DC1394_OFF = -4,
@@ -317,50 +361,6 @@ public class Videoio {
             CAP_PROP_VIEWFINDER = 17010,
             CAP_PROP_IMAGES_BASE = 18000,
             CAP_PROP_IMAGES_LAST = 19000;
-
-
-    // C++: enum VideoWriterProperties
-    public static final int
-            VIDEOWRITER_PROP_QUALITY = 1,
-            VIDEOWRITER_PROP_FRAMEBYTES = 2,
-            VIDEOWRITER_PROP_NSTRIPES = 3;
-
-
-    // C++: enum VideoCaptureAPIs
-    public static final int
-            CAP_ANY = 0,
-            CAP_VFW = 200,
-            CAP_V4L = 200,
-            CAP_V4L2 = CAP_V4L,
-            CAP_FIREWIRE = 300,
-            CAP_FIREWARE = CAP_FIREWIRE,
-            CAP_IEEE1394 = CAP_FIREWIRE,
-            CAP_DC1394 = CAP_FIREWIRE,
-            CAP_CMU1394 = CAP_FIREWIRE,
-            CAP_QT = 500,
-            CAP_UNICAP = 600,
-            CAP_DSHOW = 700,
-            CAP_PVAPI = 800,
-            CAP_OPENNI = 900,
-            CAP_OPENNI_ASUS = 910,
-            CAP_ANDROID = 1000,
-            CAP_XIAPI = 1100,
-            CAP_AVFOUNDATION = 1200,
-            CAP_GIGANETIX = 1300,
-            CAP_MSMF = 1400,
-            CAP_WINRT = 1410,
-            CAP_INTELPERC = 1500,
-            CAP_REALSENSE = 1500,
-            CAP_OPENNI2 = 1600,
-            CAP_OPENNI2_ASUS = 1610,
-            CAP_GPHOTO2 = 1700,
-            CAP_GSTREAMER = 1800,
-            CAP_FFMPEG = 1900,
-            CAP_IMAGES = 2000,
-            CAP_ARAVIS = 2100,
-            CAP_OPENCV_MJPEG = 2200,
-            CAP_INTEL_MFX = 2300,
-            CAP_XINE = 2400;
 
 
     //

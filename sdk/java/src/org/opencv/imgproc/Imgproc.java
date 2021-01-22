@@ -65,6 +65,139 @@ public class Imgproc {
             CV_THRESH_TRIANGLE = 16;
 
 
+    // C++: enum AdaptiveThresholdTypes
+    public static final int
+            ADAPTIVE_THRESH_MEAN_C = 0,
+            ADAPTIVE_THRESH_GAUSSIAN_C = 1;
+
+
+    // C++: enum MorphShapes
+    public static final int
+            MORPH_RECT = 0,
+            MORPH_CROSS = 1,
+            MORPH_ELLIPSE = 2;
+
+
+    // C++: enum HistCompMethods
+    public static final int
+            HISTCMP_CORREL = 0,
+            HISTCMP_CHISQR = 1,
+            HISTCMP_INTERSECT = 2,
+            HISTCMP_BHATTACHARYYA = 3,
+            HISTCMP_HELLINGER = HISTCMP_BHATTACHARYYA,
+            HISTCMP_CHISQR_ALT = 4,
+            HISTCMP_KL_DIV = 5;
+
+
+    // C++: enum ContourApproximationModes
+    public static final int
+            CHAIN_APPROX_NONE = 1,
+            CHAIN_APPROX_SIMPLE = 2,
+            CHAIN_APPROX_TC89_L1 = 3,
+            CHAIN_APPROX_TC89_KCOS = 4;
+
+
+    // C++: enum MorphTypes
+    public static final int
+            MORPH_ERODE = 0,
+            MORPH_DILATE = 1,
+            MORPH_OPEN = 2,
+            MORPH_CLOSE = 3,
+            MORPH_GRADIENT = 4,
+            MORPH_TOPHAT = 5,
+            MORPH_BLACKHAT = 6,
+            MORPH_HITMISS = 7;
+
+
+    // C++: enum SpecialFilter
+    public static final int
+            FILTER_SCHARR = -1;
+
+
+    // C++: enum HersheyFonts
+    public static final int
+            FONT_HERSHEY_SIMPLEX = 0,
+            FONT_HERSHEY_PLAIN = 1,
+            FONT_HERSHEY_DUPLEX = 2,
+            FONT_HERSHEY_COMPLEX = 3,
+            FONT_HERSHEY_TRIPLEX = 4,
+            FONT_HERSHEY_COMPLEX_SMALL = 5,
+            FONT_HERSHEY_SCRIPT_SIMPLEX = 6,
+            FONT_HERSHEY_SCRIPT_COMPLEX = 7,
+            FONT_ITALIC = 16;
+
+
+    // C++: enum ThresholdTypes
+    public static final int
+            THRESH_BINARY = 0,
+            THRESH_BINARY_INV = 1,
+            THRESH_TRUNC = 2,
+            THRESH_TOZERO = 3,
+            THRESH_TOZERO_INV = 4,
+            THRESH_MASK = 7,
+            THRESH_OTSU = 8,
+            THRESH_TRIANGLE = 16;
+
+
+    // C++: enum ConnectedComponentsAlgorithmsTypes
+    public static final int
+            CCL_WU = 0,
+            CCL_DEFAULT = -1,
+            CCL_GRANA = 1;
+
+
+    // C++: enum MarkerTypes
+    public static final int
+            MARKER_CROSS = 0,
+            MARKER_TILTED_CROSS = 1,
+            MARKER_STAR = 2,
+            MARKER_DIAMOND = 3,
+            MARKER_SQUARE = 4,
+            MARKER_TRIANGLE_UP = 5,
+            MARKER_TRIANGLE_DOWN = 6;
+
+
+    // C++: enum LineSegmentDetectorModes
+    public static final int
+            LSD_REFINE_NONE = 0,
+            LSD_REFINE_STD = 1,
+            LSD_REFINE_ADV = 2;
+
+
+    // C++: enum DistanceTransformLabelTypes
+    public static final int
+            DIST_LABEL_CCOMP = 0,
+            DIST_LABEL_PIXEL = 1;
+
+
+    // C++: enum GrabCutClasses
+    public static final int
+            GC_BGD = 0,
+            GC_FGD = 1,
+            GC_PR_BGD = 2,
+            GC_PR_FGD = 3;
+
+
+    // C++: enum DistanceTypes
+    public static final int
+            DIST_USER = -1,
+            DIST_L1 = 1,
+            DIST_L2 = 2,
+            DIST_C = 3,
+            DIST_L12 = 4,
+            DIST_FAIR = 5,
+            DIST_WELSCH = 6,
+            DIST_HUBER = 7;
+
+
+    // C++: enum InterpolationMasks
+    public static final int
+            INTER_BITS = 5,
+            INTER_BITS2 = INTER_BITS * 2,
+            INTER_TAB_SIZE = 1 << INTER_BITS,
+            INTER_TAB_SIZE2 = INTER_TAB_SIZE * INTER_TAB_SIZE;
+
+
     // C++: enum ColormapTypes
     public static final int
             COLORMAP_AUTUMN = 0,
@@ -89,45 +222,14 @@ public class Imgproc {
             COLORMAP_TWILIGHT_SHIFTED = 19;
 
 
-    // C++: enum HistCompMethods
+    // C++: enum ConnectedComponentsTypes
     public static final int
-            HISTCMP_CORREL = 0,
-            HISTCMP_CHISQR = 1,
-            HISTCMP_INTERSECT = 2,
-            HISTCMP_BHATTACHARYYA = 3,
-            HISTCMP_HELLINGER = HISTCMP_BHATTACHARYYA,
-            HISTCMP_CHISQR_ALT = 4,
-            HISTCMP_KL_DIV = 5;
-
-
-    // C++: enum TemplateMatchModes
-    public static final int
-            TM_SQDIFF = 0,
-            TM_SQDIFF_NORMED = 1,
-            TM_CCORR = 2,
-            TM_CCORR_NORMED = 3,
-            TM_CCOEFF = 4,
-            TM_CCOEFF_NORMED = 5;
-
-
-    // C++: enum InterpolationMasks
-    public static final int
-            INTER_BITS = 5,
-            INTER_BITS2 = INTER_BITS * 2,
-            INTER_TAB_SIZE = 1 << INTER_BITS,
-            INTER_TAB_SIZE2 = INTER_TAB_SIZE * INTER_TAB_SIZE;
-
-
-    // C++: enum ThresholdTypes
-    public static final int
-            THRESH_BINARY = 0,
-            THRESH_BINARY_INV = 1,
-            THRESH_TRUNC = 2,
-            THRESH_TOZERO = 3,
-            THRESH_TOZERO_INV = 4,
-            THRESH_MASK = 7,
-            THRESH_OTSU = 8,
-            THRESH_TRIANGLE = 16;
+            CC_STAT_LEFT = 0,
+            CC_STAT_TOP = 1,
+            CC_STAT_WIDTH = 2,
+            CC_STAT_HEIGHT = 3,
+            CC_STAT_AREA = 4,
+            CC_STAT_MAX = 5;
 
 
     // C++: enum LineTypes
@@ -138,33 +240,48 @@ public class Imgproc {
             LINE_AA = 16;
 
 
-    // C++: enum AdaptiveThresholdTypes
+    // C++: enum <unnamed>
     public static final int
-            ADAPTIVE_THRESH_MEAN_C = 0,
-            ADAPTIVE_THRESH_GAUSSIAN_C = 1;
-
-
-    // C++: enum RectanglesIntersectTypes
-    public static final int
-            INTERSECT_NONE = 0,
-            INTERSECT_PARTIAL = 1,
-            INTERSECT_FULL = 2;
-
-
-    // C++: enum SpecialFilter
-    public static final int
-            FILTER_SCHARR = -1;
-
-
-    // C++: enum MarkerTypes
-    public static final int
-            MARKER_CROSS = 0,
-            MARKER_TILTED_CROSS = 1,
-            MARKER_STAR = 2,
-            MARKER_DIAMOND = 3,
-            MARKER_SQUARE = 4,
-            MARKER_TRIANGLE_UP = 5,
-            MARKER_TRIANGLE_DOWN = 6;
+            CV_GAUSSIAN_5x5 = 7,
+            CV_SCHARR = -1,
+            CV_MAX_SOBEL_KSIZE = 7,
+            CV_RGBA2mRGBA = 125,
+            CV_mRGBA2RGBA = 126,
+            CV_WARP_FILL_OUTLIERS = 8,
+            CV_WARP_INVERSE_MAP = 16,
+            CV_CHAIN_CODE = 0,
+            CV_LINK_RUNS = 5,
+            CV_POLY_APPROX_DP = 0,
+            CV_CONTOURS_MATCH_I1 = 1,
+            CV_CONTOURS_MATCH_I2 = 2,
+            CV_CONTOURS_MATCH_I3 = 3,
+            CV_CLOCKWISE = 1,
+            CV_COUNTER_CLOCKWISE = 2,
+            CV_COMP_CORREL = 0,
+            CV_COMP_CHISQR = 1,
+            CV_COMP_INTERSECT = 2,
+            CV_COMP_BHATTACHARYYA = 3,
+            CV_COMP_HELLINGER = CV_COMP_BHATTACHARYYA,
+            CV_COMP_CHISQR_ALT = 4,
+            CV_COMP_KL_DIV = 5,
+            CV_DIST_MASK_3 = 3,
+            CV_DIST_MASK_5 = 5,
+            CV_DIST_MASK_PRECISE = 0,
+            CV_DIST_LABEL_CCOMP = 0,
+            CV_DIST_LABEL_PIXEL = 1,
+            CV_DIST_USER = -1,
+            CV_DIST_L1 = 1,
+            CV_DIST_L2 = 2,
+            CV_DIST_C = 3,
+            CV_DIST_L12 = 4,
+            CV_DIST_FAIR = 5,
+            CV_DIST_WELSCH = 6,
+            CV_DIST_HUBER = 7,
+            CV_CANNY_L2_GRADIENT = (1 << 31),
+            CV_HOUGH_STANDARD = 0,
+            CV_HOUGH_PROBABILISTIC = 1,
+            CV_HOUGH_MULTI_SCALE = 2,
+            CV_HOUGH_GRADIENT = 3;
 
 
     // C++: enum InterpolationFlags
@@ -180,19 +297,35 @@ public class Imgproc {
             WARP_INVERSE_MAP = 16;
 
 
-    // C++: enum GrabCutClasses
+    // C++: enum HoughModes
     public static final int
-            GC_BGD = 0,
-            GC_FGD = 1,
-            GC_PR_BGD = 2,
-            GC_PR_FGD = 3;
+            HOUGH_STANDARD = 0,
+            HOUGH_PROBABILISTIC = 1,
+            HOUGH_MULTI_SCALE = 2,
+            HOUGH_GRADIENT = 3;
 
 
-    // C++: enum MorphShapes
+    // C++: enum GrabCutModes
     public static final int
-            MORPH_RECT = 0,
-            MORPH_CROSS = 1,
-            MORPH_ELLIPSE = 2;
+            GC_INIT_WITH_RECT = 0,
+            GC_INIT_WITH_MASK = 1,
+            GC_EVAL = 2,
+            GC_EVAL_FREEZE_MODEL = 3;
+
+
+    // C++: enum RetrievalModes
+    public static final int
+            RETR_EXTERNAL = 0,
+            RETR_LIST = 1,
+            RETR_CCOMP = 2,
+            RETR_TREE = 3,
+            RETR_FLOODFILL = 4;
+
+
+    // C++: enum WarpPolarMode
+    public static final int
+            WARP_POLAR_LINEAR = 0,
+            WARP_POLAR_LOG = 256;
 
 
     // C++: enum ColorConversionCodes
@@ -411,34 +544,18 @@ public class Imgproc {
             FLOODFILL_MASK_ONLY = 1 << 17;
 
 
-    // C++: enum MorphShapes_c
+    // C++: enum RectanglesIntersectTypes
     public static final int
-            CV_SHAPE_RECT = 0,
-            CV_SHAPE_CROSS = 1,
-            CV_SHAPE_ELLIPSE = 2,
-            CV_SHAPE_CUSTOM = 100;
+            INTERSECT_NONE = 0,
+            INTERSECT_PARTIAL = 1,
+            INTERSECT_FULL = 2;
 
 
-    // C++: enum ConnectedComponentsTypes
+    // C++: enum ShapeMatchModes
     public static final int
-            CC_STAT_LEFT = 0,
-            CC_STAT_TOP = 1,
-            CC_STAT_WIDTH = 2,
-            CC_STAT_HEIGHT = 3,
-            CC_STAT_AREA = 4,
-            CC_STAT_MAX = 5;
-
-
-    // C++: enum DistanceTypes
-    public static final int
-            DIST_USER = -1,
-            DIST_L1 = 1,
-            DIST_L2 = 2,
-            DIST_C = 3,
-            DIST_L12 = 4,
-            DIST_FAIR = 5,
-            DIST_WELSCH = 6,
-            DIST_HUBER = 7;
+            CONTOURS_MATCH_I1 = 1,
+            CONTOURS_MATCH_I2 = 2,
+            CONTOURS_MATCH_I3 = 3;
 
 
     // C++: enum SmoothMethod_c
@@ -450,79 +567,22 @@ public class Imgproc {
             CV_BILATERAL = 4;
 
 
-    // C++: enum GrabCutModes
+    // C++: enum MorphShapes_c
     public static final int
-            GC_INIT_WITH_RECT = 0,
-            GC_INIT_WITH_MASK = 1,
-            GC_EVAL = 2,
-            GC_EVAL_FREEZE_MODEL = 3;
+            CV_SHAPE_RECT = 0,
+            CV_SHAPE_CROSS = 1,
+            CV_SHAPE_ELLIPSE = 2,
+            CV_SHAPE_CUSTOM = 100;
 
 
-    // C++: enum ContourApproximationModes
+    // C++: enum TemplateMatchModes
     public static final int
-            CHAIN_APPROX_NONE = 1,
-            CHAIN_APPROX_SIMPLE = 2,
-            CHAIN_APPROX_TC89_L1 = 3,
-            CHAIN_APPROX_TC89_KCOS = 4;
-
-
-    // C++: enum <unnamed>
-    public static final int
-            CV_GAUSSIAN_5x5 = 7,
-            CV_SCHARR = -1,
-            CV_MAX_SOBEL_KSIZE = 7,
-            CV_RGBA2mRGBA = 125,
-            CV_mRGBA2RGBA = 126,
-            CV_WARP_FILL_OUTLIERS = 8,
-            CV_WARP_INVERSE_MAP = 16,
-            CV_CHAIN_CODE = 0,
-            CV_LINK_RUNS = 5,
-            CV_POLY_APPROX_DP = 0,
-            CV_CONTOURS_MATCH_I1 = 1,
-            CV_CONTOURS_MATCH_I2 = 2,
-            CV_CONTOURS_MATCH_I3 = 3,
-            CV_CLOCKWISE = 1,
-            CV_COUNTER_CLOCKWISE = 2,
-            CV_COMP_CORREL = 0,
-            CV_COMP_CHISQR = 1,
-            CV_COMP_INTERSECT = 2,
-            CV_COMP_BHATTACHARYYA = 3,
-            CV_COMP_HELLINGER = CV_COMP_BHATTACHARYYA,
-            CV_COMP_CHISQR_ALT = 4,
-            CV_COMP_KL_DIV = 5,
-            CV_DIST_MASK_3 = 3,
-            CV_DIST_MASK_5 = 5,
-            CV_DIST_MASK_PRECISE = 0,
-            CV_DIST_LABEL_CCOMP = 0,
-            CV_DIST_LABEL_PIXEL = 1,
-            CV_DIST_USER = -1,
-            CV_DIST_L1 = 1,
-            CV_DIST_L2 = 2,
-            CV_DIST_C = 3,
-            CV_DIST_L12 = 4,
-            CV_DIST_FAIR = 5,
-            CV_DIST_WELSCH = 6,
-            CV_DIST_HUBER = 7,
-            CV_CANNY_L2_GRADIENT = (1 << 31),
-            CV_HOUGH_STANDARD = 0,
-            CV_HOUGH_PROBABILISTIC = 1,
-            CV_HOUGH_MULTI_SCALE = 2,
-            CV_HOUGH_GRADIENT = 3;
-
-
-    // C++: enum DistanceTransformLabelTypes
-    public static final int
-            DIST_LABEL_CCOMP = 0,
-            DIST_LABEL_PIXEL = 1;
-
-
-    // C++: enum RetrievalModes
-    public static final int
-            RETR_EXTERNAL = 0,
-            RETR_LIST = 1,
-            RETR_CCOMP = 2,
-            RETR_TREE = 3,
-            RETR_FLOODFILL = 4;
+            TM_SQDIFF = 0,
+            TM_SQDIFF_NORMED = 1,
+            TM_CCORR = 2,
+            TM_CCORR_NORMED = 3,
+            TM_CCOEFF = 4,
+            TM_CCOEFF_NORMED = 5;
 
 
     // C++: enum DistanceTransformMasks
@@ -530,66 +590,6 @@ public class Imgproc {
             DIST_MASK_3 = 3,
             DIST_MASK_5 = 5,
             DIST_MASK_PRECISE = 0;
-
-
-    // C++: enum MorphTypes
-    public static final int
-            MORPH_ERODE = 0,
-            MORPH_DILATE = 1,
-            MORPH_OPEN = 2,
-            MORPH_CLOSE = 3,
-            MORPH_GRADIENT = 4,
-            MORPH_TOPHAT = 5,
-            MORPH_BLACKHAT = 6,
-            MORPH_HITMISS = 7;
-
-
-    // C++: enum ShapeMatchModes
-    public static final int
-            CONTOURS_MATCH_I1 = 1,
-            CONTOURS_MATCH_I2 = 2,
-            CONTOURS_MATCH_I3 = 3;
-
-
-    // C++: enum HersheyFonts
-    public static final int
-            FONT_HERSHEY_SIMPLEX = 0,
-            FONT_HERSHEY_PLAIN = 1,
-            FONT_HERSHEY_DUPLEX = 2,
-            FONT_HERSHEY_COMPLEX = 3,
-            FONT_HERSHEY_TRIPLEX = 4,
-            FONT_HERSHEY_COMPLEX_SMALL = 5,
-            FONT_HERSHEY_SCRIPT_SIMPLEX = 6,
-            FONT_HERSHEY_SCRIPT_COMPLEX = 7,
-            FONT_ITALIC = 16;
-
-
-    // C++: enum WarpPolarMode
-    public static final int
-            WARP_POLAR_LINEAR = 0,
-            WARP_POLAR_LOG = 256;
-
-
-    // C++: enum HoughModes
-    public static final int
-            HOUGH_STANDARD = 0,
-            HOUGH_PROBABILISTIC = 1,
-            HOUGH_MULTI_SCALE = 2,
-            HOUGH_GRADIENT = 3;
-
-
-    // C++: enum LineSegmentDetectorModes
-    public static final int
-            LSD_REFINE_NONE = 0,
-            LSD_REFINE_STD = 1,
-            LSD_REFINE_ADV = 2;
-
-
-    // C++: enum ConnectedComponentsAlgorithmsTypes
-    public static final int
-            CCL_WU = 0,
-            CCL_DEFAULT = -1,
-            CCL_GRANA = 1;
 
 
     //

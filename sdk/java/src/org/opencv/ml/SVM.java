@@ -20,13 +20,14 @@ public class SVM extends StatModel {
     // internal usage only
     public static SVM __fromPtr__(long addr) { return new SVM(addr); }
 
-    // C++: enum Types
+    // C++: enum ParamTypes
     public static final int
-            C_SVC = 100,
-            NU_SVC = 101,
-            ONE_CLASS = 102,
-            EPS_SVR = 103,
-            NU_SVR = 104;
+            C = 0,
+            GAMMA = 1,
+            P = 2,
+            NU = 3,
+            COEF = 4,
+            DEGREE = 5;
 
 
     // C++: enum KernelTypes
@@ -40,14 +41,13 @@ public class SVM extends StatModel {
             INTER = 5;
 
 
-    // C++: enum ParamTypes
+    // C++: enum Types
     public static final int
-            C = 0,
-            GAMMA = 1,
-            P = 2,
-            NU = 3,
-            COEF = 4,
-            DEGREE = 5;
+            C_SVC = 100,
+            NU_SVC = 101,
+            ONE_CLASS = 102,
+            EPS_SVR = 103,
+            NU_SVR = 104;
 
 
     //

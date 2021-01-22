@@ -35,19 +35,10 @@ import org.opencv.ximgproc.SuperpixelSLIC;
 
 public class Ximgproc {
 
-    // C++: enum ThinningTypes
+    // C++: enum HoughDeskewOption
     public static final int
-            THINNING_ZHANGSUEN = 0,
-            THINNING_GUOHALL = 1;
-
-
-    // C++: enum EdgeAwareFiltersList
-    public static final int
-            DTF_NC = 0,
-            DTF_IC = 1,
-            DTF_RF = 2,
-            GUIDED_FILTER = 3,
-            AM_FILTER = 4;
+            HDO_RAW = 0,
+            HDO_DESKEW = 1;
 
 
     // C++: enum AngleRangeOption
@@ -63,6 +54,14 @@ public class Ximgproc {
             ARO_CTR_VER = 8;
 
 
+    // C++: enum HoughOp
+    public static final int
+            FHT_MIN = 0,
+            FHT_MAX = 1,
+            FHT_ADD = 2,
+            FHT_AVE = 3;
+
+
     // C++: enum WMFWeightType
     public static final int
             WMF_EXP = 1,
@@ -73,6 +72,13 @@ public class Ximgproc {
             WMF_OFF = 1 << 5;
 
 
+    // C++: enum SLICType
+    public static final int
+            SLIC = 100,
+            SLICO = 101,
+            MSLIC = 102;
+
+
     // C++: enum LocalBinarizationMethods
     public static final int
             BINARIZATION_NIBLACK = 0,
@@ -81,25 +87,19 @@ public class Ximgproc {
             BINARIZATION_NICK = 3;
 
 
-    // C++: enum HoughDeskewOption
+    // C++: enum ThinningTypes
     public static final int
-            HDO_RAW = 0,
-            HDO_DESKEW = 1;
+            THINNING_ZHANGSUEN = 0,
+            THINNING_GUOHALL = 1;
 
 
-    // C++: enum HoughOp
+    // C++: enum EdgeAwareFiltersList
     public static final int
-            FHT_MIN = 0,
-            FHT_MAX = 1,
-            FHT_ADD = 2,
-            FHT_AVE = 3;
-
-
-    // C++: enum SLICType
-    public static final int
-            SLIC = 100,
-            SLICO = 101,
-            MSLIC = 102;
+            DTF_NC = 0,
+            DTF_IC = 1,
+            DTF_RF = 2,
+            GUIDED_FILTER = 3,
+            AM_FILTER = 4;
 
 
     //

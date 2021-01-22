@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget libcpufeatures libjpeg-turbo libtiff libwebp libjasper libpng IlmImf libprotobuf quirc tegra_hal ocv.3rdparty.android_mediandk opencv_core opencv_flann opencv_imgproc opencv_ml opencv_phase_unwrapping opencv_photo opencv_plot opencv_quality opencv_reg opencv_surface_matching opencv_xphoto opencv_dnn opencv_fuzzy opencv_hfs opencv_img_hash opencv_imgcodecs opencv_videoio opencv_highgui opencv_bioinspired opencv_dnn_objdetect opencv_features2d opencv_line_descriptor opencv_saliency opencv_text opencv_calib3d opencv_ccalib opencv_datasets opencv_objdetect opencv_rgbd opencv_shape opencv_structured_light opencv_video opencv_videostab opencv_xfeatures2d opencv_ximgproc opencv_xobjdetect opencv_aruco opencv_bgsegm opencv_dpm opencv_face opencv_optflow opencv_stitching opencv_superres opencv_tracking opencv_java opencv_stereo)
+foreach(_expectedTarget libcpufeatures libjpeg-turbo libtiff libwebp libjasper libpng IlmImf libprotobuf quirc tegra_hal opencv_core opencv_flann opencv_imgproc opencv_ml opencv_phase_unwrapping opencv_photo opencv_plot opencv_quality opencv_reg opencv_surface_matching opencv_xphoto opencv_dnn opencv_fuzzy opencv_hfs opencv_img_hash opencv_imgcodecs opencv_videoio opencv_highgui opencv_bioinspired opencv_dnn_objdetect opencv_features2d opencv_line_descriptor opencv_saliency opencv_text opencv_calib3d opencv_ccalib opencv_datasets opencv_objdetect opencv_rgbd opencv_shape opencv_stitching opencv_structured_light opencv_video opencv_videostab opencv_ximgproc opencv_xobjdetect opencv_aruco opencv_bgsegm opencv_dpm opencv_face opencv_optflow opencv_superres opencv_tracking opencv_java opencv_stereo)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -61,7 +61,7 @@ add_library(libjpeg-turbo STATIC IMPORTED)
 add_library(libtiff STATIC IMPORTED)
 
 set_target_properties(libtiff PROPERTIES
-  INTERFACE_LINK_LIBRARIES "C:/Users/gunmo/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/libz.a"
+  INTERFACE_LINK_LIBRARIES "C:/Users/gunmo/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/libz.a"
 )
 
 # Create imported target libwebp
@@ -78,14 +78,14 @@ add_library(libjasper STATIC IMPORTED)
 add_library(libpng STATIC IMPORTED)
 
 set_target_properties(libpng PROPERTIES
-  INTERFACE_LINK_LIBRARIES "C:/Users/gunmo/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/libz.a"
+  INTERFACE_LINK_LIBRARIES "C:/Users/gunmo/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/libz.a"
 )
 
 # Create imported target IlmImf
 add_library(IlmImf STATIC IMPORTED)
 
 set_target_properties(IlmImf PROPERTIES
-  INTERFACE_LINK_LIBRARIES "C:/Users/gunmo/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/libz.a"
+  INTERFACE_LINK_LIBRARIES "C:/Users/gunmo/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/libz.a"
 )
 
 # Create imported target libprotobuf
@@ -97,21 +97,11 @@ add_library(quirc STATIC IMPORTED)
 # Create imported target tegra_hal
 add_library(tegra_hal STATIC IMPORTED)
 
-# Create imported target ocv.3rdparty.android_mediandk
-add_library(ocv.3rdparty.android_mediandk INTERFACE IMPORTED)
-
-set_target_properties(ocv.3rdparty.android_mediandk PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "HAVE_ANDROID_MEDIANDK"
-  INTERFACE_INCLUDE_DIRECTORIES ""
-  INTERFACE_LINK_LIBRARIES "-landroid -llog -lmediandk"
-  INTERFACE_SYSTEM_INCLUDE_DIRECTORIES ""
-)
-
 # Create imported target opencv_core
 add_library(opencv_core STATIC IMPORTED)
 
 set_target_properties(opencv_core PROPERTIES
-  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>;C:/Users/gunmo/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/libz.a;\$<LINK_ONLY:libcpufeatures>;\$<LINK_ONLY:tegra_hal>"
+  INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>;C:/Users/gunmo/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/libz.a;\$<LINK_ONLY:libcpufeatures>;\$<LINK_ONLY:tegra_hal>"
 )
 
 # Create imported target opencv_flann
@@ -216,14 +206,14 @@ set_target_properties(opencv_img_hash PROPERTIES
 add_library(opencv_imgcodecs STATIC IMPORTED)
 
 set_target_properties(opencv_imgcodecs PROPERTIES
-  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>;C:/Users/gunmo/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/libz.a;\$<LINK_ONLY:libjpeg-turbo>;\$<LINK_ONLY:libwebp>;\$<LINK_ONLY:libpng>;\$<LINK_ONLY:libtiff>;\$<LINK_ONLY:libjasper>;\$<LINK_ONLY:IlmImf>"
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>;C:/Users/gunmo/AppData/Local/Android/Sdk/ndk/20.1.5948944/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/libz.a;\$<LINK_ONLY:libjpeg-turbo>;\$<LINK_ONLY:libwebp>;\$<LINK_ONLY:libpng>;\$<LINK_ONLY:libtiff>;\$<LINK_ONLY:libjasper>;\$<LINK_ONLY:IlmImf>"
 )
 
 # Create imported target opencv_videoio
 add_library(opencv_videoio STATIC IMPORTED)
 
 set_target_properties(opencv_videoio PROPERTIES
-  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_imgcodecs;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>;\$<LINK_ONLY:ocv.3rdparty.android_mediandk>"
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_imgproc;opencv_imgcodecs;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>"
 )
 
 # Create imported target opencv_highgui
@@ -317,6 +307,13 @@ set_target_properties(opencv_shape PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>"
 )
 
+# Create imported target opencv_stitching
+add_library(opencv_stitching STATIC IMPORTED)
+
+set_target_properties(opencv_stitching PROPERTIES
+  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>"
+)
+
 # Create imported target opencv_structured_light
 add_library(opencv_structured_light STATIC IMPORTED)
 
@@ -336,13 +333,6 @@ add_library(opencv_videostab STATIC IMPORTED)
 
 set_target_properties(opencv_videostab PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_photo;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_video;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>"
-)
-
-# Create imported target opencv_xfeatures2d
-add_library(opencv_xfeatures2d STATIC IMPORTED)
-
-set_target_properties(opencv_xfeatures2d PROPERTIES
-  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_shape;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>"
 )
 
 # Create imported target opencv_ximgproc
@@ -394,13 +384,6 @@ set_target_properties(opencv_optflow PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_video;opencv_ximgproc;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>"
 )
 
-# Create imported target opencv_stitching
-add_library(opencv_stitching STATIC IMPORTED)
-
-set_target_properties(opencv_stitching PROPERTIES
-  INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_calib3d;opencv_shape;opencv_xfeatures2d;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>"
-)
-
 # Create imported target opencv_superres
 add_library(opencv_superres STATIC IMPORTED)
 
@@ -429,8 +412,8 @@ set_target_properties(opencv_stereo PROPERTIES
   INTERFACE_LINK_LIBRARIES "opencv_core;opencv_flann;opencv_imgproc;opencv_ml;opencv_plot;opencv_dnn;opencv_imgcodecs;opencv_videoio;opencv_highgui;opencv_features2d;opencv_text;opencv_calib3d;opencv_datasets;opencv_video;opencv_tracking;\$<LINK_ONLY:dl>;\$<LINK_ONLY:m>;\$<LINK_ONLY:log>;\$<LINK_ONLY:tegra_hal>"
 )
 
-if(CMAKE_VERSION VERSION_LESS 3.0.0)
-  message(FATAL_ERROR "This file relies on consumers using CMake 3.0.0 or greater.")
+if(CMAKE_VERSION VERSION_LESS 2.8.12)
+  message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
 endif()
 
 # Load information for each installed configuration.

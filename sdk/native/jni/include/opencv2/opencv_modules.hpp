@@ -8,7 +8,7 @@
 
 // This definition means that OpenCV is built with enabled non-free code.
 // For example, patented algorithms for non-profit/non-commercial use only.
-#define OPENCV_ENABLE_NONFREE
+/* #undef OPENCV_ENABLE_NONFREE */
 
 #define HAVE_OPENCV_ARUCO
 #define HAVE_OPENCV_BGSEGM
@@ -51,7 +51,6 @@
 #define HAVE_OPENCV_VIDEO
 #define HAVE_OPENCV_VIDEOIO
 #define HAVE_OPENCV_VIDEOSTAB
-#define HAVE_OPENCV_XFEATURES2D
 #define HAVE_OPENCV_XIMGPROC
 #define HAVE_OPENCV_XOBJDETECT
 #define HAVE_OPENCV_XPHOTO

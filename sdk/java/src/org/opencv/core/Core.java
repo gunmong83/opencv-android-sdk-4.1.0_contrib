@@ -43,11 +43,21 @@ public class Core {
             CV_USRTYPE1 = 7;
 
 
-    // C++: enum KmeansFlags
+    // C++: enum CovarFlags
     public static final int
-            KMEANS_RANDOM_CENTERS = 0,
-            KMEANS_PP_CENTERS = 2,
-            KMEANS_USE_INITIAL_LABELS = 1;
+            COVAR_SCRAMBLED = 0,
+            COVAR_NORMAL = 1,
+            COVAR_USE_AVG = 2,
+            COVAR_SCALE = 4,
+            COVAR_ROWS = 8,
+            COVAR_COLS = 16;
+
+
+    // C++: enum Flags
+    public static final int
+            PCA_DATA_AS_ROW = 0,
+            PCA_DATA_AS_COL = 1,
+            PCA_USE_AVG = 2;
 
 
     // C++: enum RotateFlags
@@ -57,14 +67,34 @@ public class Core {
             ROTATE_90_COUNTERCLOCKWISE = 2;
 
 
-    // C++: enum FormatType
+    // C++: enum KmeansFlags
     public static final int
-            Formatter_FMT_DEFAULT = 0,
-            Formatter_FMT_MATLAB = 1,
-            Formatter_FMT_CSV = 2,
-            Formatter_FMT_PYTHON = 3,
-            Formatter_FMT_NUMPY = 4,
-            Formatter_FMT_C = 5;
+            KMEANS_RANDOM_CENTERS = 0,
+            KMEANS_PP_CENTERS = 2,
+            KMEANS_USE_INITIAL_LABELS = 1;
+
+
+    // C++: enum Param
+    public static final int
+            Param_INT = 0,
+            Param_BOOLEAN = 1,
+            Param_REAL = 2,
+            Param_STRING = 3,
+            Param_MAT = 4,
+            Param_MAT_VECTOR = 5,
+            Param_ALGORITHM = 6,
+            Param_FLOAT = 7,
+            Param_UNSIGNED_INT = 8,
+            Param_UINT64 = 9,
+            Param_UCHAR = 11,
+            Param_SCALAR = 12;
+
+
+    // C++: enum IMPL
+    public static final int
+            IMPL_PLAIN = 0,
+            IMPL_IPP = 0+1,
+            IMPL_OPENCL = 0+2;
 
 
     // C++: enum Code
@@ -126,21 +156,26 @@ public class Core {
             OpenCLNoAMDBlasFft = -223;
 
 
-    // C++: enum CmpTypes
+    // C++: enum <unnamed>
     public static final int
-            CMP_EQ = 0,
-            CMP_GT = 1,
-            CMP_GE = 2,
-            CMP_LT = 3,
-            CMP_LE = 4,
-            CMP_NE = 5;
+            SVD_MODIFY_A = 1,
+            SVD_NO_UV = 2,
+            SVD_FULL_UV = 4,
+            FILLED = -1,
+            REDUCE_SUM = 0,
+            REDUCE_AVG = 1,
+            REDUCE_MAX = 2,
+            REDUCE_MIN = 3,
+            RNG_UNIFORM = 0,
+            RNG_NORMAL = 1;
 
 
-    // C++: enum FLAGS
+    // C++: enum SortFlags
     public static final int
-            FLAGS_NONE = 0,
-            FLAGS_MAPPING = 0x01,
-            FLAGS_EXPAND_SAME_NAMES = 0x02;
+            SORT_EVERY_ROW = 0,
+            SORT_EVERY_COLUMN = 1,
+            SORT_ASCENDING = 0,
+            SORT_DESCENDING = 16;
 
 
     // C++: enum NormTypes
@@ -156,69 +191,14 @@ public class Core {
             NORM_MINMAX = 32;
 
 
-    // C++: enum SortFlags
+    // C++: enum CmpTypes
     public static final int
-            SORT_EVERY_ROW = 0,
-            SORT_EVERY_COLUMN = 1,
-            SORT_ASCENDING = 0,
-            SORT_DESCENDING = 16;
-
-
-    // C++: enum <unnamed>
-    public static final int
-            SVD_MODIFY_A = 1,
-            SVD_NO_UV = 2,
-            SVD_FULL_UV = 4,
-            FILLED = -1,
-            REDUCE_SUM = 0,
-            REDUCE_AVG = 1,
-            REDUCE_MAX = 2,
-            REDUCE_MIN = 3,
-            RNG_UNIFORM = 0,
-            RNG_NORMAL = 1;
-
-
-    // C++: enum IMPL
-    public static final int
-            IMPL_PLAIN = 0,
-            IMPL_IPP = 0+1,
-            IMPL_OPENCL = 0+2;
-
-
-    // C++: enum BorderTypes
-    public static final int
-            BORDER_CONSTANT = 0,
-            BORDER_REPLICATE = 1,
-            BORDER_REFLECT = 2,
-            BORDER_WRAP = 3,
-            BORDER_REFLECT_101 = 4,
-            BORDER_TRANSPARENT = 5,
-            BORDER_REFLECT101 = BORDER_REFLECT_101,
-            BORDER_DEFAULT = BORDER_REFLECT_101,
-            BORDER_ISOLATED = 16;
-
-
-    // C++: enum Param
-    public static final int
-            Param_INT = 0,
-            Param_BOOLEAN = 1,
-            Param_REAL = 2,
-            Param_STRING = 3,
-            Param_MAT = 4,
-            Param_MAT_VECTOR = 5,
-            Param_ALGORITHM = 6,
-            Param_FLOAT = 7,
-            Param_UNSIGNED_INT = 8,
-            Param_UINT64 = 9,
-            Param_UCHAR = 11,
-            Param_SCALAR = 12;
-
-
-    // C++: enum GemmFlags
-    public static final int
-            GEMM_1_T = 1,
-            GEMM_2_T = 2,
-            GEMM_3_T = 4;
+            CMP_EQ = 0,
+            CMP_GT = 1,
+            CMP_GE = 2,
+            CMP_LT = 3,
+            CMP_LE = 4,
+            CMP_NE = 5;
 
 
     // C++: enum DecompTypes
@@ -231,21 +211,36 @@ public class Core {
             DECOMP_NORMAL = 16;
 
 
-    // C++: enum Flags
+    // C++: enum FLAGS
     public static final int
-            PCA_DATA_AS_ROW = 0,
-            PCA_DATA_AS_COL = 1,
-            PCA_USE_AVG = 2;
+            FLAGS_NONE = 0,
+            FLAGS_MAPPING = 0x01,
+            FLAGS_EXPAND_SAME_NAMES = 0x02;
 
 
-    // C++: enum CovarFlags
+    // C++: enum TYPE
     public static final int
-            COVAR_SCRAMBLED = 0,
-            COVAR_NORMAL = 1,
-            COVAR_USE_AVG = 2,
-            COVAR_SCALE = 4,
-            COVAR_ROWS = 8,
-            COVAR_COLS = 16;
+            TYPE_GENERAL = 0,
+            TYPE_MARKER = 0+1,
+            TYPE_WRAPPER = 0+2,
+            TYPE_FUN = 0+3;
+
+
+    // C++: enum GemmFlags
+    public static final int
+            GEMM_1_T = 1,
+            GEMM_2_T = 2,
+            GEMM_3_T = 4;
+
+
+    // C++: enum FormatType
+    public static final int
+            Formatter_FMT_DEFAULT = 0,
+            Formatter_FMT_MATLAB = 1,
+            Formatter_FMT_CSV = 2,
+            Formatter_FMT_PYTHON = 3,
+            Formatter_FMT_NUMPY = 4,
+            Formatter_FMT_C = 5;
 
 
     // C++: enum DftFlags
@@ -260,12 +255,17 @@ public class Core {
             DCT_ROWS = DFT_ROWS;
 
 
-    // C++: enum TYPE
+    // C++: enum BorderTypes
     public static final int
-            TYPE_GENERAL = 0,
-            TYPE_MARKER = 0+1,
-            TYPE_WRAPPER = 0+2,
-            TYPE_FUN = 0+3;
+            BORDER_CONSTANT = 0,
+            BORDER_REPLICATE = 1,
+            BORDER_REFLECT = 2,
+            BORDER_WRAP = 3,
+            BORDER_REFLECT_101 = 4,
+            BORDER_TRANSPARENT = 5,
+            BORDER_REFLECT101 = BORDER_REFLECT_101,
+            BORDER_DEFAULT = BORDER_REFLECT_101,
+            BORDER_ISOLATED = 16;
 
 
     //

@@ -33,14 +33,14 @@ public class HOGDescriptor {
             DESCR_FORMAT_ROW_BY_ROW = 1;
 
 
-    // C++: enum <unnamed>
-    public static final int
-            DEFAULT_NLEVELS = 64;
-
-
     // C++: enum HistogramNormType
     public static final int
             L2Hys = 0;
+
+
+    // C++: enum <unnamed>
+    public static final int
+            DEFAULT_NLEVELS = 64;
 
 
     //

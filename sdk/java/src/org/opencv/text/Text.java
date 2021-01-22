@@ -17,16 +17,23 @@ import org.opencv.utils.Converters;
 
 public class Text {
 
+    // C++: enum ocr_engine_mode
+    public static final int
+            OEM_TESSERACT_ONLY = 0,
+            OEM_CUBE_ONLY = 1,
+            OEM_TESSERACT_CUBE_COMBINED = 2,
+            OEM_DEFAULT = 3;
+
+
     // C++: enum classifier_type
     public static final int
             OCR_KNN_CLASSIFIER = 0,
             OCR_CNN_CLASSIFIER = 1;
 
 
-    // C++: enum erGrouping_Modes
+    // C++: enum decoder_mode
     public static final int
-            ERGROUPING_ORIENTATION_HORIZ = 0,
-            ERGROUPING_ORIENTATION_ANY = 1;
+            OCR_DECODER_VITERBI = 0;
 
 
     // C++: enum <unnamed>
@@ -52,17 +59,10 @@ public class Text {
             PSM_SINGLE_CHAR = 10;
 
 
-    // C++: enum decoder_mode
+    // C++: enum erGrouping_Modes
     public static final int
-            OCR_DECODER_VITERBI = 0;
-
-
-    // C++: enum ocr_engine_mode
-    public static final int
-            OEM_TESSERACT_ONLY = 0,
-            OEM_CUBE_ONLY = 1,
-            OEM_TESSERACT_CUBE_COMBINED = 2,
-            OEM_DEFAULT = 3;
+            ERGROUPING_ORIENTATION_HORIZ = 0,
+            ERGROUPING_ORIENTATION_ANY = 1;
 
 
     //

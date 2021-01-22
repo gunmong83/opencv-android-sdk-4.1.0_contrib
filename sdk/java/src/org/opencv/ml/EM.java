@@ -22,6 +22,14 @@ public class EM extends StatModel {
     // internal usage only
     public static EM __fromPtr__(long addr) { return new EM(addr); }
 
+    // C++: enum Types
+    public static final int
+            COV_MAT_SPHERICAL = 0,
+            COV_MAT_DIAGONAL = 1,
+            COV_MAT_GENERIC = 2,
+            COV_MAT_DEFAULT = COV_MAT_DIAGONAL;
+
+
     // C++: enum <unnamed>
     public static final int
             DEFAULT_NCLUSTERS = 5,
@@ -29,14 +37,6 @@ public class EM extends StatModel {
             START_E_STEP = 1,
             START_M_STEP = 2,
             START_AUTO_STEP = 0;
-
-
-    // C++: enum Types
-    public static final int
-            COV_MAT_SPHERICAL = 0,
-            COV_MAT_DIAGONAL = 1,
-            COV_MAT_GENERIC = 2,
-            COV_MAT_DEFAULT = COV_MAT_DIAGONAL;
 
 
     //
